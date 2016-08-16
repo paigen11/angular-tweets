@@ -37,20 +37,23 @@ h1, h3 {
   background-color: white;
   margin: 30px auto;
   padding: 15px;
+  border-radius: 5px;
 }
 
-/* line 56, ../../compass-master/sass/styles.scss */
+/* line 57, ../../compass-master/sass/styles.scss */
 .tweet-wrapper {
   padding: 10px;
   background-color: #b3b3b3;
+  border-radius: 5px;
 }
 
-/* line 61, ../../compass-master/sass/styles.scss */
+/* line 63, ../../compass-master/sass/styles.scss */
 .twPics {
   margin: 10px;
+  border-radius: 5px;
 }
 
-/* line 65, ../../compass-master/sass/styles.scss */
+/* line 68, ../../compass-master/sass/styles.scss */
 .twText {
   margin: 10px;
 }
