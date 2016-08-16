@@ -2,42 +2,41 @@
 body {
   background: url(../images/rwb.jpg);
   font-family: 'Montserrat', sans-serif;
+  background-size: cover;
 }
 
-/* line 27, ../../compass-master/sass/styles.scss */
+/* line 28, ../../compass-master/sass/styles.scss */
 .navbar {
   margin-bottom: 0px;
 }
 
-/* line 31, ../../compass-master/sass/styles.scss */
+/* line 32, ../../compass-master/sass/styles.scss */
 h1, h3 {
   color: white;
 }
 
-/* line 35, ../../compass-master/sass/styles.scss */
-.tweetView {
-  margin-top: 20px;
-  border: solid 5px black;
-}
-
-/* line 40, ../../compass-master/sass/styles.scss */
+/* line 36, ../../compass-master/sass/styles.scss */
 .header-wrapper {
   text-align: center;
   background-color: #404040;
-  margin-top: 40px;
+  margin-top: 50px;
+  position: fixed;
+  z-index: 2000;
 }
 
-/* line 46, ../../compass-master/sass/styles.scss */
+/* line 44, ../../compass-master/sass/styles.scss */
 .tweetBox {
   margin: 15px;
+  margin-top: 150px;
 }
 
-/* line 50, ../../compass-master/sass/styles.scss */
+/* line 49, ../../compass-master/sass/styles.scss */
 .userTweets {
   background-color: white;
   margin: 30px auto;
   padding: 15px;
   border-radius: 5px;
+  border: 1px solid black;
 }
 
 /* line 57, ../../compass-master/sass/styles.scss */

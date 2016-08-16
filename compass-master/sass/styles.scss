@@ -22,6 +22,7 @@
 body{
 	background: url(../images/rwb.jpg);
 	font-family: 'Montserrat', sans-serif;
+	background-size: cover;
 }
 
 .navbar{
@@ -32,19 +33,17 @@ h1, h3{
 	color: white;
 }
 
-.tweetView{
-	margin-top: 20px;
-	border: solid 5px black;
-}
-
 .header-wrapper{
 	text-align: center;
 	background-color: #404040;
-	margin-top: 40px;
+	margin-top: 50px;
+	position: fixed;
+	z-index: 2000;
 }
 
 .tweetBox{
 	margin: 15px;
+	margin-top: 150px;
 }
 
 .userTweets{
@@ -52,6 +51,7 @@ h1, h3{
 	margin: 30px auto;
 	padding: 15px;
 	border-radius: 5px;
+	border: 1px solid black;
 }
 
 .tweet-wrapper{
