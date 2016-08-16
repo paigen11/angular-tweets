@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="tweetApp">
 <head>
-	<title></title
-
-	>
+	<title>Silly Twitter Tweets</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,10 +10,13 @@
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
 
+	<script type="text/javascript" src="js/tweets.js"></script>
 	<script type="text/javascript" src="js/tweetModule.js"></script>
 	<script type="text/javascript" src="js/tweetController.js"></script>
 	<script type="text/javascript" src="js/homeController.js"></script>
 	<script type="text/javascript" src="js/trumpController.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
 </head>
 <body ng-controller="tweetController">
@@ -27,21 +28,55 @@
 
 	<div turn-me-blue>Hover over me and I will console. I'm a custom directive.</div> -->
 	
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<ul class="nav navbar-nav">
 					<li><a href="#">Live Tweets</a></li>
 					<li><a href="#/">Home</a></li>
-					<li><a href="#/trump">Trumpisms</a></li>
-					<li><a href="#/">Hillary</a></li>
+					<li><a href="#/trump" ng-click="trumpClick()">Trumpisms</a></li>
+					<li><a href="#/" ng-click="hillaryClick()">Lyin' Hillary</a></li>
 				</ul>
 			</div>
-		</div>
+			<form class='navbar-form navbar-right' ng-submit="getNewTweets()">
+				<div class="form-group">
+	          		<input type="text" class="form-control" ng-model="searchbar" placeholder="Search Hashtags">
+	        		</div>
+	        		<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</form>
 	</nav>
+	
+	<div class="container-fluid header-wrapper header-fixed">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Are you ready for the next president of the United States? Twitter Sure Isn't</h1>
+			</div>
+			<div class="col-sm-12">
+				<h3>Click on Trump, Hillary or search for your own hashtags and see what Twitter's all about... if you dare.</h3>
+			</div>
+		</div>
+	</div>
 
 	<!-- <custom-menu></custom-menu> -->
 	<div ng-view class="tweetView"></div>
-	{{message}}
+	<!-- {{message}} -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 tweetBox">
+					
+						<div class="userTweets" ng-repeat="tweet in tweetArr">
+							<div class="tweet-wrapper">
+
+								<img class="twPics" ng-src="{{tweet.user.profile_image_url}}">
+								<span>Name: {{tweet.user.name}}</span>
+								<p class="twText">Twitter Handle: {{tweet.user.screen_name}}</p>
+								<p class="twText">Content: {{tweet.text}}</p>
+								<p class="twText">Date: {{tweet.created_at}}</p>
+							</div>
+						</div>	
+				</div>	
+			</div>
+		</div>	
 </body>
 </html>

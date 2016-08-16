@@ -19,8 +19,49 @@
 // @import "views/delivery";
 // @import "views/payment";
 // @import "views/account";
+body{
+	background: url(../images/rwb.jpg);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+	margin-bottom: 0px;
+}
+
+h1, h3{
+	color: white;
+}
 
 .tweetView{
-	margin-top: 40px;
+	margin-top: 20px;
 	border: solid 5px black;
+}
+
+.header-wrapper{
+	text-align: center;
+	background-color: #404040;
+	margin-top: 40px;
+}
+
+.tweetBox{
+	margin: 15px;
+}
+
+.userTweets{
+	background-color: white;
+	margin: 30px auto;
+	padding: 15px;
+}
+
+.tweet-wrapper{
+	padding: 10px;
+	background-color: #b3b3b3;
+}
+
+.twPics{
+	margin:10px;
+}
+
+.twText{
+	margin: 10px
 }

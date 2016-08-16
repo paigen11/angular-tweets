@@ -1,11 +1,12 @@
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-11 col-sm-offset-">
-					{{message}}
+			<div class="col-sm-12">
+					{{message}}		
 				<li ng-repeat="tweet in tweetArr">
 					{{tweet.twitterHandle}}<br />
-					{{tweet.tweet}}, {{tweet.time}}
+					{{tweet.tweet}}<br />
+					{{tweet.time}}<br />
 					<img ng-src="{{tweet.userPicture}}">
 				</li>
 			</div>
@@ -14,7 +15,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-11 col-sm-offset-">
+			<div class="col-sm-12">
 				{{message1}}
 			</div>
 		</div>
