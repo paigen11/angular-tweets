@@ -8,18 +8,26 @@ var tweetApp = angular.module('tweetApp', ['ngRoute']);
 // 	}
 // });	
 
-// tweetApp.config(function($routeProvider){
-// 	$routeProvider.when('/', { // at /, load up home with home controller
-// 		templateUrl: 'views/home.html',
-// 		controller: 'homeController'
-// 	});
-// 	$routeProvider.when('/trump', { // at Trump, load up the same template but new controller
-// 		templateUrl: 'views/home.html',
-// 		controller: 'trumpController'
-// 	});
-// 	$routeProvider.when('/hillary', { // at Hillary, load up the same template but new controller
-// 		templateUrl: 'views/home.html',
-// 		controller: 'hillaryController'
-// 	});
-// 	$routeProvider.otherwise('/'); //default
-// });
+tweetApp.config(function($routeProvider){
+	// at /, load up home with home controller
+	$routeProvider.when('/', { 
+		templateUrl: 'views/home.html',
+		controller: 'tweetController'
+	});
+	// at Trump, load up the same template but new controller
+	$routeProvider.when('/:searchTerm', { 
+		templateUrl: 'views/home.html',
+		controller: 'tweetController'
+	});
+	$routeProvider.when('/:searchTerm*', { 
+		templateUrl: 'views/home.html',
+		controller: 'tweetController'
+	});
+	// at Hillary, load up the same template but new controller
+	// $routeProvider.when('/hillary', { 
+	// 	templateUrl: 'views/home.html',
+	// 	controller: 'hillaryController'
+	// });
+	//default
+	// $routeProvider.otherwise('/'); 
+});

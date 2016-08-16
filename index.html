@@ -14,12 +14,12 @@
 	<script type="text/javascript" src="js/tweetModule.js"></script>
 	<script type="text/javascript" src="js/tweetController.js"></script>
 	<script type="text/javascript" src="js/homeController.js"></script>
-	<script type="text/javascript" src="js/trumpController.js"></script>
+	<!-- <script type="text/javascript" src="js/trumpController.js"></script> -->
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
 </head>
-<body ng-controller="tweetController">
+<body ng-controller="homeController">
 <!-- 	<tweet-hello></tweet-hello>
 	<div hello-attr></div>
 	<div turn-me-blue=myColor class="hello-class"></div>
@@ -59,24 +59,7 @@
 	</div>
 
 	<!-- <custom-menu></custom-menu> -->
-	<div ng-view class="tweetView"></div>
-	<!-- {{message}} -->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 tweetBox">
-					
-						<div class="userTweets" ng-repeat="tweet in tweetArr">
-							<div class="tweet-wrapper">
-
-								<img class="twPics" ng-src="{{tweet.user.profile_image_url}}">
-								<span>Name: {{tweet.user.name}}</span>
-								<p class="twText">Twitter Handle: {{tweet.user.screen_name}}</p>
-								<p class="twText">Content: {{tweet.text}}</p>
-								<p class="twText">Date: {{tweet.created_at}}</p>
-							</div>
-						</div>	
-				</div>	
-			</div>
-		</div>	
+	<div ng-view></div>
+	
 </body>
 </html>

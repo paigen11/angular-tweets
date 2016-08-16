@@ -1,25 +1,21 @@
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12">
-					{{message}}		
-				<li ng-repeat="tweet in tweetArr">
-					{{tweet.twitterHandle}}<br />
-					{{tweet.tweet}}<br />
-					{{tweet.time}}<br />
-					<img ng-src="{{tweet.userPicture}}">
-				</li>
-			</div>
-		</div>
-	</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 tweetBox">
+					
+						<div class="userTweets" ng-repeat="tweet in tweetArr">
+							<div class="tweet-wrapper">
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				{{message1}}
+								<img class="twPics" ng-src="{{tweet.user.profile_image_url}}">
+								<span>Name: {{tweet.user.name}}</span>
+								<p class="twText">Twitter Handle: {{tweet.user.screen_name}}</p>
+								<p class="twText">Content: {{tweet.text}}</p>
+								<p class="twText">Date: {{tweet.created_at}}</p>
+							</div>
+						</div>	
+				</div>	
 			</div>
 		</div>
-	</div>
 
 
 
