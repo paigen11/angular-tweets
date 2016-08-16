@@ -25,3 +25,22 @@ tweetApp.config(function($routeProvider){
 });
 
 	
+function Tweet(twitterHandle, userPicture, tweet, time){
+	this.twitterHandle = twitterHandle;
+	this.userPicture = userPicture;
+	this.tweet = tweet;
+	this.time = time;
+}
+
+var tweetArr = [];
+
+var newTweet1 = new Tweet("@pniedri", "https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500", "this is a test", "Mon Aug 15" );
+tweetArr.push(newTweet1);
+var newTweet2 = new Tweet("@pniedri", "https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500", "this is a test", "Mon Aug 15" );
+tweetArr.push(newTweet2);
+var newTweet3 = new Tweet("@pniedri", "https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500", "this is a test", "Mon Aug 15" );
+tweetArr.push(newTweet3);
+var newTweet4 = new Tweet("@pniedri", "https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500", "this is a test", "Mon Aug 15" );
+tweetArr.push(newTweet4);
+var newTweet5 = new Tweet("@pniedri", "https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500", "this is a test", "Mon Aug 15" );
+tweetArr.push(newTweet5);

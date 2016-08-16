@@ -1,1 +1,26 @@
-	<custom-menu></custom-menu>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-11 col-sm-offset-">
+					{{message}}
+				<li ng-repeat="tweet in tweetArr">
+					{{tweet.twitterHandle}}<br />
+					{{tweet.tweet}}, {{tweet.time}}
+					<img ng-src="{{tweet.userPicture}}">
+				</li>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-11 col-sm-offset-">
+				{{message1}}
+			</div>
+		</div>
+	</div>
+
+
+
+
+

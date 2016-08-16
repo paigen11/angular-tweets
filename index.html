@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="tweetApp">
 <head>
-	<title></title>
+	<title></title
 
+	>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-cookies.min.js"></script>
@@ -10,6 +14,9 @@
 
 	<script type="text/javascript" src="js/tweetModule.js"></script>
 	<script type="text/javascript" src="js/tweetController.js"></script>
+	<script type="text/javascript" src="js/homeController.js"></script>
+	<script type="text/javascript" src="js/trumpController.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
 </head>
 <body ng-controller="tweetController">
 <!-- 	<tweet-hello></tweet-hello>
@@ -19,8 +26,22 @@
 	<input type="text" ng-model="myColor" name="">
 
 	<div turn-me-blue>Hover over me and I will console. I'm a custom directive.</div> -->
+	
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Live Tweets</a></li>
+					<li><a href="#/">Home</a></li>
+					<li><a href="#/trump">Trumpisms</a></li>
+					<li><a href="#/">Hillary</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-	<custom-menu></custom-menu>
-	<div ng-view></div>
+	<!-- <custom-menu></custom-menu> -->
+	<div ng-view class="tweetView"></div>
+	{{message}}
 </body>
 </html>
