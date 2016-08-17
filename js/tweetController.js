@@ -15,7 +15,7 @@ tweetApp.controller('tweetController', function($scope, $http, $location, $route
 	if($routeParams.searchTerm){
 		var searchTerm = $routeParams.searchTerm;
 	}else{
-		var searchTerm = 'trump';
+		randoUrl;
 	}
 
 	$http({
