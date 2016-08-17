@@ -30,7 +30,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
 </head>
-<body ng-controller="homeController" ng-init="showPrompt()">
+<body ng-controller="homeController">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
@@ -40,6 +40,7 @@
 							<li ng-class=home><a href="#/">Home</a></li>
 							<li ng-class=trump><a href="#/trump">Trumpisms</a></li>
 							<li ng-class=hillary><a href="#/hillary">Lyin' Hillary</a></li>
+              <li ng-click="showPrompt()"><a href="#/search">Search</a></li>
 						</ul>	
 					</div>
 			</div>
@@ -56,6 +57,8 @@
 			</div>
 		</div>
 	</div>	
+
+  {{status}}
 
 	<div ng-view class="tweetView"></div>
 	

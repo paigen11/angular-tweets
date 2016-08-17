@@ -8,6 +8,7 @@ tweetApp.controller('homeController', function($scope, $http, $location, $mdDial
 		$scope.trump = '';
 		$scope.hillary = '';
 		$scope.home = '';
+		$scope.search = '';
 		console.log("The path changed. It's now " + newPath);	
 		if(newPath == '/trump'){
 			$scope.trump = 'active';
@@ -15,6 +16,8 @@ tweetApp.controller('homeController', function($scope, $http, $location, $mdDial
 			$scope.hillary = 'active';
 		}else if(newPath == '/'){
 			$scope.home = 'active';
+		}else if(newPath == '/search'){
+			$scope.search = 'active;'
 		}
 	}
 	);
@@ -22,17 +25,17 @@ tweetApp.controller('homeController', function($scope, $http, $location, $mdDial
 	 $scope.showPrompt = function(ev) {
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.prompt()
-      .title('What would you name your dog?')
-      .textContent('Bowser is a common name.')
-      .placeholder('Dog name')
-      .ariaLabel('Dog name')
+      .title('Who would you like to see? Trump? Hillary? Or something else in the Twitterverse?')
+      .textContent('They never cease to amaze.')
+      .placeholder('Search')
+      .ariaLabel('Search')
       .targetEvent(ev)
-      .ok('Okay!')
-      .cancel('I\'m a cat person');
+      .ok('Go!')
+      .cancel('Nah, there\'s too much crazy in my world already.');
     $mdDialog.show(confirm).then(function(result) {
-      $scope.status = 'You decided to name your dog ' + result + '.';
+      $location.path(result);
     }, function() {
-      $scope.status = 'You didn\'t name your dog.';
+      $scope.status = 'No worries, we totally understand';
     });
   };
 
