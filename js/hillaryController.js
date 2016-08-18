@@ -1,10 +1,10 @@
-tweetApp.controller('trumpController', function($scope, $http, $location, $routeParams){
-	$scope.test = 'test tweet for trump controller';
+tweetApp.controller('hillaryController', function($scope, $http, $location, $routeParams){
+	$scope.message = "hillary controller working";
 	$scope.tweetArr = tweetArr;
 
 $http({
 		method: 'GET',
-		url: 'http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=trump'
+		url: 'http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=hillary'
 	}).then(
 		function successFunction(tweetData){
 			$scope.tweetArr = tweetData.data.statuses;

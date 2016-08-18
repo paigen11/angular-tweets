@@ -20,7 +20,7 @@ tweetApp.controller('tweetController', function($scope, $http, $location, $route
 
 	$http({
 		method: 'GET',
-		url: 'http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash='+searchTerm
+		url: randoUrl
 	}).then(
 		function successFunction(tweetData){
 			$scope.tweetArr = tweetData.data.statuses;

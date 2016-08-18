@@ -20,9 +20,14 @@
 // @import "views/payment";
 // @import "views/account";
 body{
-	background: url(../images/rwb.jpg);
+	
+	background-image: url(../images/rwb.jpg);
 	font-family: 'Montserrat', sans-serif;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	
 }
 
 #menu ul {
@@ -63,6 +68,39 @@ h1, h3{
 .tweetBox{
 	margin: 15px;
 	margin-top: 150px;
+}
+
+// .tweetView.ng-enter, .tweetView.ng-leave {
+// 	transition: all 1.5s;
+// }
+
+// .tweetView.ng-enter {
+// 	left: 100%;
+// 	&.ng-enter-active{
+// 		left: 0;
+// 	}
+// }
+
+// .tweetView.ng-leave.ng-leave-active {
+// 	left: -100%;
+// }
+@keyframes slideOutLeft {
+	to { transform: translateX(-100%); }
+}
+
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+.ng-enter { 
+	animation: slideInRight 1s both ease-in; 
+	z-index: 8888; 
+}
+
+.ng-leave {
+	animation: slideOutLeft 1s both ease-in; 
+	z-index: 9999; 
 }
 
 .userTweets{

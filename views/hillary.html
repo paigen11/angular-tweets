@@ -1,0 +1,17 @@
+	<div class="container">
+			<div class="row">
+				<div class="col-sm-12 tweetBox">
+					
+						<div class="userTweets" ng-repeat="tweet in tweetArr">
+							<div class="tweet-wrapper">
+
+								<img class="twPics" ng-src="{{tweet.user.profile_image_url}}">
+								<span>Name: {{tweet.user.name}}</span>
+								<p class="twText">Twitter Handle: {{tweet.user.screen_name}}</p>
+								<p class="twText">Content: {{tweet.text}}</p>
+								<p class="twText">Date: {{tweet.created_at}}</p>
+							</div>
+						</div>	
+				</div>	
+			</div>
+		</div>
